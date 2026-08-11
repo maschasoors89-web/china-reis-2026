@@ -73,20 +73,20 @@ const ACTIVITIES = {
 };
 
 const DISHES = [
-  { id:"ds1", nl:"Peking eend", zh:"北京烤鸭", pinyin:"Běijīng kǎoyā", stad:"Peking", desc:"Knapperig geroosterde eend, aan tafel gesneden. Geserveerd met flinterdunne pannenkoekjes, bosuitjes, komkommer en hoisin-saus. Symbool van de Pekingse keuken.", warn:false },
-  { id:"ds2", nl:"Xiaolongbao", zh:"小笼包", pinyin:"Xiǎolóngbāo", stad:"Shanghai", desc:"Soep-dumplings gevuld met heet bouillon en varkensvlees. Let op: eerst een gaatje bijten, dan de soep opdrinken voor je de rest opeet.", warn:true, warnTekst:"⚠️ Heet! Eerst gaatje bijten" },
-  { id:"ds3", nl:"Shaobing", zh:"烧饼", pinyin:"Shāobǐng", stad:"Overal", desc:"Knapperig sesambroodje gevuld met vlees, ei of groente. Straatvoedsel-klassieker – denk aan een stevige sandwich met een krokante korst.", warn:false },
-  { id:"ds4", nl:"Congee (rijstpap)", zh:"粥", pinyin:"Zhōu", stad:"Overal", desc:"Dikke rijstepap, vaak als ontbijt. Neutraal van smaak, met toppings zoals ingelegde groente, ei of gedroogd vlees. Comfort food.", warn:false },
-  { id:"ds5", nl:"Youtiao", zh:"油条", pinyin:"Yóutiáo", stad:"Overal", desc:"Lang gefrituurd deegstengel – luchtig en krokant. Traditioneel gegeten bij congee. Waarschijnlijk Tess-favoriet!", warn:false },
-  { id:"ds6", nl:"Jianbing (straatpannenkoek)", zh:"煎饼", pinyin:"Jiānbǐng", stad:"Overal", desc:"Dunne savory pannenkoek gebakken op een hete plaat, met ei, bosui, hoisin en krokant deeg. Hét Chinese straatontbijt.", warn:false },
-  { id:"ds7", nl:"Fan Tuan", zh:"饭团", pinyin:"Fàntuán", stad:"Shanghai", desc:"Rijstbal gevuld met youtiao en ingelegde groente. Compact en voedzaam – Chinese versie van een onigiri.", warn:false },
-  { id:"ds8", nl:"Mapo Tofu", zh:"麻婆豆腐", pinyin:"Mápó dòufu", stad:"Chengdu", desc:"Zachte tofu in een vurige saus van Sichuan peperbollen en chili. Karakteristiek verdovend gevoel. Soms met varkensvlees.", warn:true, warnTekst:"🌶️ Pittig · vraag naar varkensvlees-vrij" },
-  { id:"ds9", nl:"Hotpot", zh:"火锅", pinyin:"Huǒguō", stad:"Chengdu", desc:"Kokende bouillon op tafel, eigen ingrediënten indopen. Chengdu-stijl pikant met Sichuan peper. Half-half pot bestellen voor Tess!", warn:true, warnTekst:"🌶️ Half-half pot voor Tess!" },
-  { id:"ds10", nl:"Hui Guo Rou Mian", zh:"回锅肉面", pinyin:"Huíguōròu miàn", stad:"Chengdu", desc:"Noedels met tweemaal gebakken varkensvlees in pittige paprikasaus. Aanbevolen: Shangchi Mianguan, Shangchi Zhengjie 39.", warn:false },
-  { id:"ds11", nl:"Chongqing Liangfen", zh:"重庆凉粉", pinyin:"Chóngqìng liángfěn", stad:"Chengdu", desc:"Koude rijstgelei-noedels in chili-olie, azijn en knoflook. Fris-pittig, heerlijk in de hitte.", warn:true, warnTekst:"🌶️ Pittig" },
-  { id:"ds12", nl:"Huang Liangfen", zh:"黄凉粉", pinyin:"Huáng liángfěn", stad:"Chengdu", desc:"Gele bonenmeel-gelei koud geserveerd met pittige saus. Karakteristieke gele kleur. Lichte zomerhap.", warn:false },
-  { id:"ds13", nl:"Stinky Tofu", zh:"臭豆腐", pinyin:"Chòu dòufu", stad:"Overal", desc:"Gefermenteerde tofu die sterk ruikt maar zacht en smaakvol is na frituren. Streetfood-icoon. De geur is erger dan de smaak!", warn:false },
-  { id:"ds14", nl:"Re Gan Mian", zh:"热干面", pinyin:"Règān miàn", stad:"Overal", desc:"Hete droge noedels met sesamdeeg, sojasaus en azijn. Droog en hartig, sterk eigen smaak. Populair straatontbijt.", warn:false },
+  { id:"ds1", nl:"Peking eend", zh:"北京烤鸭", pinyin:"Běijīng kǎoyā", klank:"bay-jing kow-ya", stad:"Peking", desc:"Knapperig geroosterde eend, aan tafel gesneden. Geserveerd met flinterdunne pannenkoekjes, bosuitjes, komkommer en hoisin-saus. Symbool van de Pekingse keuken.", warn:false },
+  { id:"ds2", nl:"Xiaolongbao", zh:"小笼包", pinyin:"Xiǎolóngbāo", klank:"syow-loong-bow", stad:"Shanghai", desc:"Soep-dumplings gevuld met heet bouillon en varkensvlees. Let op: eerst een gaatje bijten, dan de soep opdrinken voor je de rest opeet.", warn:true, warnTekst:"⚠️ Heet! Eerst gaatje bijten" },
+  { id:"ds3", nl:"Shaobing", zh:"烧饼", pinyin:"Shāobǐng", klank:"shaow-bing", stad:"Overal", desc:"Knapperig sesambroodje gevuld met vlees, ei of groente. Straatvoedsel-klassieker – denk aan een stevige sandwich met een krokante korst.", warn:false },
+  { id:"ds4", nl:"Congee (rijstpap)", zh:"粥", pinyin:"Zhōu", klank:"joe", stad:"Overal", desc:"Dikke rijstepap, vaak als ontbijt. Neutraal van smaak, met toppings zoals ingelegde groente, ei of gedroogd vlees. Comfort food.", warn:false },
+  { id:"ds5", nl:"Youtiao", zh:"油条", pinyin:"Yóutiáo", klank:"yoh-tyow", stad:"Overal", desc:"Lang gefrituurd deegstengel – luchtig en krokant. Traditioneel gegeten bij congee. Waarschijnlijk Tess-favoriet!", warn:false },
+  { id:"ds6", nl:"Jianbing (straatpannenkoek)", zh:"煎饼", pinyin:"Jiānbǐng", klank:"jyen-bing", stad:"Overal", desc:"Dunne savory pannenkoek gebakken op een hete plaat, met ei, bosui, hoisin en krokant deeg. Hét Chinese straatontbijt.", warn:false },
+  { id:"ds7", nl:"Fan Tuan", zh:"饭团", pinyin:"Fàntuán", klank:"fan-twahn", stad:"Shanghai", desc:"Rijstbal gevuld met youtiao en ingelegde groente. Compact en voedzaam – Chinese versie van een onigiri.", warn:false },
+  { id:"ds8", nl:"Mapo Tofu", zh:"麻婆豆腐", pinyin:"Mápó dòufu", klank:"ma-paw doe-foo", stad:"Chengdu", desc:"Zachte tofu in een vurige saus van Sichuan peperbollen en chili. Karakteristiek verdovend gevoel. Soms met varkensvlees.", warn:true, warnTekst:"🌶️ Pittig · vraag naar varkensvlees-vrij" },
+  { id:"ds9", nl:"Hotpot", zh:"火锅", pinyin:"Huǒguō", klank:"hwoh-gwoh", stad:"Chengdu", desc:"Kokende bouillon op tafel, eigen ingrediënten indopen. Chengdu-stijl pikant met Sichuan peper. Half-half pot bestellen voor Tess!", warn:true, warnTekst:"🌶️ Half-half pot voor Tess!" },
+  { id:"ds10", nl:"Hui Guo Rou Mian", zh:"回锅肉面", pinyin:"Huíguōròu miàn", klank:"hway-gwoh-roh myen", stad:"Chengdu", desc:"Noedels met tweemaal gebakken varkensvlees in pittige paprikasaus. Aanbevolen: Shangchi Mianguan, Shangchi Zhengjie 39.", warn:false },
+  { id:"ds11", nl:"Chongqing Liangfen", zh:"重庆凉粉", pinyin:"Chóngqìng liángfěn", klank:"choong-ching lyang-fun", stad:"Chengdu", desc:"Koude rijstgelei-noedels in chili-olie, azijn en knoflook. Fris-pittig, heerlijk in de hitte.", warn:true, warnTekst:"🌶️ Pittig" },
+  { id:"ds12", nl:"Huang Liangfen", zh:"黄凉粉", pinyin:"Huáng liángfěn", klank:"hwang lyang-fun", stad:"Chengdu", desc:"Gele bonenmeel-gelei koud geserveerd met pittige saus. Karakteristieke gele kleur. Lichte zomerhap.", warn:false },
+
+  { id:"ds14", nl:"Re Gan Mian", zh:"热干面", pinyin:"Règān miàn", klank:"ruh-gan myen", stad:"Overal", desc:"Hete droge noedels met sesamdeeg, sojasaus en azijn. Droog en hartig, sterk eigen smaak. Populair straatontbijt.", warn:false },
 ];
 
 const DAYS_TEMPLATE = [
@@ -426,6 +426,19 @@ function PlanningTab({dayData,setSelectedId,setTab}) {
 }
 
 // ─── INFO TAB ─────────────────────────────────────────────────────────────────
+const GETALLEN = [
+  ["1","一","Wijsvinger omhoog ☝️"],
+  ["2","二","Wijsvinger + middelvinger omhoog (V-teken) ✌️"],
+  ["3","三","Wijsvinger + middelvinger + ringvinger omhoog"],
+  ["4","四","Alle vingers omhoog, duim gevouwen"],
+  ["5","五","Hele hand open 🖐️"],
+  ["6","六","Duim + pink uitsteken, drie middelste vingers gevouwen 🤙"],
+  ["7","七","Duim + wijsvinger + middelvinger bij elkaar"],
+  ["8","八","Duim omhoog + wijsvinger + middelvinger gestrekt"],
+  ["9","九","Wijsvinger gebogen als haakje, rest gevouwen"],
+  ["10","十","Vuist (of duim omhoog) ✊"],
+];
+
 const INFO_ITEMS = [
   { id:"i01", regio:"shanghai", titel:"Futuristische Shanghai",
     tekst:"🤖 COFE+ robots op Nanjing Road – latte-art uit een machine.\n🚗 Zelfrijdende Didi-taxi's in Changning district.\n🚁 Drone-bezorging zichtbaar bij winkelcentra.\n📱 QR-ordering: scan tafelcode, bestel, betaal met Alipay.\n🏗️ Tsutaya Books in Columbia Circle: monumentale boekenwanden + Japans design." },
@@ -442,18 +455,28 @@ function speak(text) {
   window.speechSynthesis.cancel();
   const utt = new SpeechSynthesisUtterance(text);
   utt.lang = "zh-CN";
-  utt.rate = 0.85;
-  // Try to find a Chinese voice
-  const voices = window.speechSynthesis.getVoices();
-  const zhVoice = voices.find(v => v.lang.startsWith("zh"));
-  if (zhVoice) utt.voice = zhVoice;
-  window.speechSynthesis.speak(utt);
+  utt.rate = 0.8;
+  utt.volume = 1;
+  utt.pitch = 1;
+  // Try to find a Chinese voice; wait for voices to load if needed
+  const trySpeak = () => {
+    const voices = window.speechSynthesis.getVoices();
+    const zhVoice = voices.find(v => v.lang.startsWith("zh"));
+    if (zhVoice) utt.voice = zhVoice;
+    window.speechSynthesis.speak(utt);
+  };
+  if (window.speechSynthesis.getVoices().length === 0) {
+    window.speechSynthesis.onvoiceschanged = trySpeak;
+  } else {
+    trySpeak();
+  }
 }
 
 function InfoTab() {
   const [open,setOpen]=useState(null);
   const [filter,setFilter]=useState("all");
   const [openChinees,setOpenChinees]=useState(true);
+  const [openGetallen,setOpenGetallen]=useState(false);
   const filtered=INFO_ITEMS.filter(i=>filter==="all"||i.regio===filter);
   return (
     <div style={{padding:"0 16px 16px"}}>
@@ -472,30 +495,8 @@ function InfoTab() {
         </button>
         {openChinees&&(
           <div style={{padding:"0 14px 14px",borderTop:`1px solid ${C.mist}`}}>
-            <div style={{fontSize:11,color:C.dim,marginBottom:10,lineHeight:1.5}}>
-              Cijfers 1–5 zijn hetzelfde als bij ons. Boven de 5 zijn de handgebaren anders:
-            </div>
-            <div style={{fontSize:11,fontWeight:700,color:C.dim,textTransform:"uppercase",letterSpacing:"0.07em",margin:"4px 0 8px"}}>Getallen – handgebaren</div>
-            <div style={{display:"grid",gap:5,marginBottom:12}}>
-              {[
-                ["1","一","Wijsvinger omhoog ☝️"],
-                ["2","二","Wijsvinger + middelvinger omhoog (V-teken) ✌️"],
-                ["3","三","Wijsvinger + middelvinger + ringvinger omhoog"],
-                ["4","四","Alle vingers omhoog, duim gevouwen"],
-                ["5","五","Hele hand open 🖐️"],
-                ["6","六","Duim + pink uitsteken, drie middelste vingers gevouwen 🤙"],
-                ["7","七","Duim + wijsvinger + middelvinger bij elkaar"],
-                ["8","八","Duim omhoog + wijsvinger + middelvinger gestrekt"],
-                ["9","九","Wijsvinger gebogen als haakje, rest gevouwen"],
-                ["10","十","Vuist (of duim omhoog) ✊"],
-              ].map(([n,zh,uitleg])=>(
-                <div key={n} style={{display:"flex",gap:10,alignItems:"center",padding:"6px 10px",background:C.paper,borderRadius:8}}>
-                  <div style={{fontSize:15,fontWeight:800,color:C.ink,width:22,flexShrink:0}}>{n}</div>
-                  <div style={{fontSize:18,fontWeight:700,color:C.shanghai,width:24,flexShrink:0}}>{zh}</div>
-                  <div style={{fontSize:12,color:C.dim,lineHeight:1.4}}>{uitleg}</div>
-                </div>
-              ))}
-            </div>
+
+
             {WOORDEN.map((w,i)=>(
               <div key={i} style={{display:"flex",alignItems:"center",gap:10,padding:"8px 0",borderBottom:i<WOORDEN.length-1?`1px solid ${C.mist}`:"none",flexWrap:"wrap"}}>
                 <div style={{width:100,fontSize:12,fontWeight:600,color:C.ink,flexShrink:0}}>{w.nl}</div>
@@ -507,6 +508,27 @@ function InfoTab() {
                 </button>
               </div>
             ))}
+          </div>
+        )}
+      </div>
+
+      {/* Getallen */}
+      <div style={{background:C.white,borderRadius:12,marginBottom:8,overflow:"hidden",boxShadow:"0 1px 6px rgba(0,0,0,0.06)"}}>
+        <button onClick={()=>setOpenGetallen(o=>!o)} style={{width:"100%",padding:"12px 14px",background:"none",border:"none",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"space-between",textAlign:"left"}}>
+          <div style={{fontSize:14,fontWeight:700,color:C.ink}}>🔢 Getallen</div>
+          <span style={{fontSize:16,color:C.ghost}}>{openGetallen?"▲":"▼"}</span>
+        </button>
+        {openGetallen&&(
+          <div style={{padding:"0 14px 14px",borderTop:`1px solid ${C.mist}`}}>
+            <div style={{display:"grid",gap:5}}>
+              {GETALLEN.map(([n,zh,uitleg])=>(
+                <div key={n} style={{display:"flex",gap:10,alignItems:"center",padding:"6px 10px",background:C.paper,borderRadius:8}}>
+                  <div style={{fontSize:15,fontWeight:800,color:C.ink,width:22,flexShrink:0}}>{n}</div>
+                  <div style={{fontSize:18,fontWeight:700,color:C.shanghai,width:24,flexShrink:0}}>{zh}</div>
+                  <div style={{fontSize:12,color:C.dim,lineHeight:1.4}}>{uitleg}</div>
+                </div>
+              ))}
+            </div>
           </div>
         )}
       </div>
@@ -536,6 +558,15 @@ function InfoTab() {
 function EtenTab() {
   const [open,setOpen]=useState(null);
   const [filter,setFilter]=useState("all");
+  const [tried,setTried]=useState(()=>{
+    try { return JSON.parse(localStorage.getItem("dishes_tried")||"{}"); }
+    catch { return {}; }
+  });
+  const toggleTried=(id)=>{
+    const upd={...tried,[id]:!tried[id]};
+    setTried(upd);
+    try { localStorage.setItem("dishes_tried",JSON.stringify(upd)); } catch{}
+  };
   const steden=["all","Shanghai","Chengdu","Peking","Overal"];
   const filtered=filter==="all"?DISHES:DISHES.filter(d=>d.stad===filter);
   return (
@@ -553,23 +584,34 @@ function EtenTab() {
           const cityColor=dish.stad==="Shanghai"?C.shanghai:dish.stad==="Chengdu"?C.chengdu:dish.stad==="Peking"?C.beijing:C.ghost;
           return (
             <div key={dish.id} style={{background:C.white,borderRadius:12,overflow:"hidden",boxShadow:"0 1px 6px rgba(0,0,0,0.06)"}}>
-              <button onClick={()=>setOpen(isOpen?null:dish.id)} style={{width:"100%",padding:"12px 14px",background:"none",border:"none",cursor:"pointer",textAlign:"left",display:"flex",alignItems:"center",justifyContent:"space-between",gap:10}}>
-                <div style={{flex:1}}>
-                  <div style={{display:"flex",alignItems:"baseline",gap:8,flexWrap:"wrap"}}>
-                    <span style={{fontSize:14,fontWeight:700,color:C.ink}}>{dish.nl}</span>
-                    <span style={{fontSize:16,color:C.shanghai,fontWeight:700}}>{dish.zh}</span>
+              <div style={{display:"flex",alignItems:"center",gap:0}}>
+                <button onClick={()=>toggleTried(dish.id)}
+                  style={{padding:"12px 10px 12px 14px",background:"none",border:"none",cursor:"pointer",flexShrink:0,fontSize:20}}>
+                  {tried[dish.id] ? "✅" : "⬜"}
+                </button>
+                <button onClick={()=>setOpen(isOpen?null:dish.id)} style={{flex:1,padding:"12px 14px 12px 4px",background:"none",border:"none",cursor:"pointer",textAlign:"left",display:"flex",alignItems:"center",justifyContent:"space-between",gap:10}}>
+                  <div style={{flex:1,opacity:tried[dish.id]?0.45:1}}>
+                    <div style={{display:"flex",alignItems:"baseline",gap:8,flexWrap:"wrap"}}>
+                      <span style={{fontSize:14,fontWeight:700,color:C.ink,textDecoration:tried[dish.id]?"line-through":"none"}}>{dish.nl}</span>
+                      <span style={{fontSize:16,color:C.shanghai,fontWeight:700}}>{dish.zh}</span>
+                    </div>
+                    <div style={{fontSize:11,color:C.dim,marginTop:3}}>{dish.pinyin}</div>
+                    <div style={{display:"flex",gap:5,marginTop:5,flexWrap:"wrap"}}>
+                      <Chip bg={`${cityColor}15`} color={cityColor}>{dish.stad}</Chip>
+                      {dish.warn&&<Chip bg="#FEF3C7" color="#92400E">{dish.warnTekst}</Chip>}
+                    </div>
                   </div>
-                  <div style={{fontSize:11,color:C.dim,marginTop:3}}>{dish.pinyin}</div>
-                  <div style={{display:"flex",gap:5,marginTop:5,flexWrap:"wrap"}}>
-                    <Chip bg={`${cityColor}15`} color={cityColor}>{dish.stad}</Chip>
-                    {dish.warn&&<Chip bg="#FEF3C7" color="#92400E">{dish.warnTekst}</Chip>}
-                  </div>
-                </div>
-                <span style={{fontSize:16,color:C.ghost,flexShrink:0}}>{isOpen?"▲":"▼"}</span>
-              </button>
+                  <span style={{fontSize:16,color:C.ghost,flexShrink:0}}>{isOpen?"▲":"▼"}</span>
+                </button>
+              </div>
               {isOpen&&(
-                <div style={{padding:"0 14px 14px",borderTop:`1px solid ${C.mist}`,paddingTop:12,fontSize:13,color:C.dim,lineHeight:1.6}}>
-                  {dish.desc}
+                <div style={{padding:"0 14px 14px",borderTop:`1px solid ${C.mist}`,paddingTop:12}}>
+                  <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:8}}>
+                    <div style={{fontSize:12,color:C.dim}}>{dish.pinyin}</div>
+                    <em style={{fontSize:11,color:C.ghost}}>{dish.klank}</em>
+                    <button onClick={()=>speak(dish.zh)} style={{marginLeft:"auto",background:"none",border:`1px solid ${C.mist}`,borderRadius:8,padding:"3px 8px",cursor:"pointer",fontSize:13,color:C.dim}}>🔊</button>
+                  </div>
+                  <div style={{fontSize:13,color:C.dim,lineHeight:1.6}}>{dish.desc}</div>
                 </div>
               )}
             </div>
