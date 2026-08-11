@@ -437,6 +437,19 @@ const INFO_ITEMS = [
     tekst:"🚡 Kabelbaan omhoog – ook goed met buggy.\n🛷 Rodelbaan omlaag – Tess zal genieten!\n🎒 Locker bij ingang: geen zware tas nodig op de muur.\n⏰ Vroeg vertrekken (08:30): minder druk, koeler.\n🚌 Bus of georganiseerde tour vanuit Peking (~1,5u enkele reis)." },
 ];
 
+function speak(text) {
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  const utt = new SpeechSynthesisUtterance(text);
+  utt.lang = "zh-CN";
+  utt.rate = 0.85;
+  // Try to find a Chinese voice
+  const voices = window.speechSynthesis.getVoices();
+  const zhVoice = voices.find(v => v.lang.startsWith("zh"));
+  if (zhVoice) utt.voice = zhVoice;
+  window.speechSynthesis.speak(utt);
+}
+
 function InfoTab() {
   const [open,setOpen]=useState(null);
   const [filter,setFilter]=useState("all");
@@ -460,13 +473,38 @@ function InfoTab() {
         {openChinees&&(
           <div style={{padding:"0 14px 14px",borderTop:`1px solid ${C.mist}`}}>
             <div style={{fontSize:11,color:C.dim,marginBottom:10,lineHeight:1.5}}>
-              Cijfers 1–5 zijn hetzelfde als bij ons. Boven de 5 zijn de handgebaren anders — zie tips in Logistiek.
+              Cijfers 1–5 zijn hetzelfde als bij ons. Boven de 5 zijn de handgebaren anders:
+            </div>
+            <div style={{fontSize:11,fontWeight:700,color:C.dim,textTransform:"uppercase",letterSpacing:"0.07em",margin:"4px 0 8px"}}>Getallen – handgebaren</div>
+            <div style={{display:"grid",gap:5,marginBottom:12}}>
+              {[
+                ["1","一","Wijsvinger omhoog ☝️"],
+                ["2","二","Wijsvinger + middelvinger omhoog (V-teken) ✌️"],
+                ["3","三","Wijsvinger + middelvinger + ringvinger omhoog"],
+                ["4","四","Alle vingers omhoog, duim gevouwen"],
+                ["5","五","Hele hand open 🖐️"],
+                ["6","六","Duim + pink uitsteken, drie middelste vingers gevouwen 🤙"],
+                ["7","七","Duim + wijsvinger + middelvinger bij elkaar"],
+                ["8","八","Duim omhoog + wijsvinger + middelvinger gestrekt"],
+                ["9","九","Wijsvinger gebogen als haakje, rest gevouwen"],
+                ["10","十","Vuist (of duim omhoog) ✊"],
+              ].map(([n,zh,uitleg])=>(
+                <div key={n} style={{display:"flex",gap:10,alignItems:"center",padding:"6px 10px",background:C.paper,borderRadius:8}}>
+                  <div style={{fontSize:15,fontWeight:800,color:C.ink,width:22,flexShrink:0}}>{n}</div>
+                  <div style={{fontSize:18,fontWeight:700,color:C.shanghai,width:24,flexShrink:0}}>{zh}</div>
+                  <div style={{fontSize:12,color:C.dim,lineHeight:1.4}}>{uitleg}</div>
+                </div>
+              ))}
             </div>
             {WOORDEN.map((w,i)=>(
               <div key={i} style={{display:"flex",alignItems:"center",gap:10,padding:"8px 0",borderBottom:i<WOORDEN.length-1?`1px solid ${C.mist}`:"none",flexWrap:"wrap"}}>
-                <div style={{width:110,fontSize:12,fontWeight:600,color:C.ink,flexShrink:0}}>{w.nl}</div>
-                <div style={{fontSize:18,color:C.shanghai,fontWeight:700,width:60,flexShrink:0}}>{w.zh}</div>
+                <div style={{width:100,fontSize:12,fontWeight:600,color:C.ink,flexShrink:0}}>{w.nl}</div>
+                <div style={{fontSize:18,color:C.shanghai,fontWeight:700,width:55,flexShrink:0}}>{w.zh}</div>
                 <div style={{fontSize:11,color:C.dim,flex:1}}>{w.pin}<br/><em style={{color:C.ghost}}>{w.klank}</em></div>
+                <button onClick={()=>speak(w.zh)} title="Uitspreken"
+                  style={{background:"none",border:`1px solid ${C.mist}`,borderRadius:8,padding:"4px 8px",cursor:"pointer",fontSize:14,color:C.dim,flexShrink:0}}>
+                  🔊
+                </button>
               </div>
             ))}
           </div>
