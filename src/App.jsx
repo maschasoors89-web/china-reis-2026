@@ -27,48 +27,55 @@ const CLIMATE = {
 
 const ACTIVITIES = {
   shanghai:[
-    { id:"sh1", titel:"The Bund + Huangpu River Ferry 🛳", notitie:"Wandel langs de skyline, pak daarna de lokale pont (黄浦江渡轮) naar Pudong voor het iconische uitzicht op de skyline. Authentiek, een paar yuan.", weather:"sun", tess:true, metro:"🚇 Lijn 10 (Jiaotong Univ.) → East Nanjing Road (南京东路), ~30 min" },
-    { id:"sh2", titel:"Baja Bikes fietstour", notitie:"Geleide tour langs Shanghai's highlights. bajabikes.eu – vooraf boeken.", weather:"sun", tess:false, metro:"🚇 Vertrek vanuit centrum, check website voor exacte locatie" },
-    { id:"sh3", titel:"Shanghai Ocean Aquarium", notitie:"Pinguïns, ijsberen, haaien. Airconditioned, vlak bij de Bund in Pudong.", weather:"indoor", tess:true, metro:"🚇 Lijn 2 → Lujiazui (陆家嘴)" },
-    { id:"sh4", titel:"Peppa Pig World of Play", notitie:"Indoor pretpark voor peuters. Tess gaat uit haar dak!", weather:"indoor", tess:true, metro:"🚇 Lijn 2 → Lujiazui (陆家嘴), in iapm Mall" },
-    { id:"sh5", titel:"Century Park", notitie:"Shanghai's grootste park met roeiboten, groene ruimte en ruimte voor Tess.", weather:"sun", tess:true, metro:"🚇 Lijn 2 → Century Park (世纪公园)" },
-    { id:"sh6", titel:"Zhujiajiao waterstad", notitie:"Historisch canal-stadje op ~1 uur. Gondels, bruggetjes, oude winkeltjes.", weather:"any", tess:false, metro:"🚇 Lijn 17 → Zhujiajiao (朱家角)" },
-    { id:"sh7", titel:"Columbia Circle + Xingfuli wandelroute", notitie:"~3,2 km autovrij onder platanenlaan. Tsutaya Books, robot-ordering. Direct vanuit jullie hotel op Panyu Road!", weather:"any", tess:false, metro:"🚶 Te voet vanuit hotel – Xingfuli ligt schuin tegenover op Panyu Road 381" },
-    { id:"sh8", titel:"Futuristisch restaurant (drone/robot)", notitie:"Drone-bezorging of robot-bediening. Reserveren!", weather:"indoor", tess:true, metro:"🚇 Afhankelijk van restaurant – meestal in Pudong of Jing'An" },
-    { id:"sh9", titel:"Yu Garden + bazaar (豫园)", notitie:"Klassieke Ming-dynasty tuin. Omringd door bazaarsteegjes – ideaal voor streetfood en souvenirs. Op ~2 km van hotel.", weather:"any", tess:true, metro:"🚇 Lijn 10 → Yu Garden (豫园)" },
-    { id:"sh10", titel:"French Concession + Tianzifang", notitie:"Historische Franse wijk met smalle steegjes, koffietentjes en galerijtjes. Een van de meest karakteristieke buurten van Shanghai.", weather:"any", tess:false, metro:"🚇 Lijn 1 → Shaanxi South Road (陕西南路)" },
-    { id:"sh11", titel:"People's Park + Shanghai Museum", notitie:"Groen park met Shanghai Museum (gratis, 120.000 artefacten). Vanuit hotel: lijn 10 richting centrum.", weather:"sun", tess:true, metro:"🚇 Lijn 10 → People's Square (人民广场), 4 stops" },
-    { id:"sh12", titel:"Lujiazui skyline – wolkenkrabbers", notitie:"Jin Mao Tower, SWFC en Shanghai Tower van dichtbij. Observation deck Shanghai Tower (632m!) optioneel.", weather:"any", tess:false, metro:"🚇 Lijn 2 → Lujiazui (陆家嘴)" },
+    { id:"sh1", titel:"The Bund + Huangpu River Ferry 🛳", notitie:"Wandel langs de skyline, pak daarna de lokale pont (黄浦江渡轮) naar Pudong voor het iconische uitzicht op de skyline. Authentiek, een paar yuan.", weather:"sun", tess:true, metro:"🚇 Lijn 10 (Jiaotong Univ.) → East Nanjing Road (南京东路), ~30 min", zone:"bund" },
+    { id:"sh2", titel:"Baja Bikes fietstour", notitie:"Geleide tour langs Shanghai's highlights. bajabikes.eu – vooraf boeken.", weather:"sun", tess:false, metro:"🚇 Vertrek vanuit centrum, check website voor exacte locatie", zone:"bund" },
+    { id:"sh3", titel:"Shanghai Ocean Aquarium", notitie:"Pinguïns, ijsberen, haaien. Airconditioned, vlak bij de Bund in Pudong.", weather:"indoor", tess:true, metro:"🚇 Lijn 2 → Lujiazui (陆家嘴)", zone:"pudong" },
+    { id:"sh4", titel:"Peppa Pig World of Play", notitie:"Indoor pretpark voor peuters. Tess gaat uit haar dak!", weather:"indoor", tess:true, metro:"🚇 Lijn 2 → Lujiazui (陆家嘴), in iapm Mall", zone:"pudong" },
+    { id:"sh5", titel:"Century Park", notitie:"Shanghai's grootste park met roeiboten, groene ruimte en ruimte voor Tess.", weather:"sun", tess:true, metro:"🚇 Lijn 2 → Century Park (世纪公园)", zone:"pudong" },
+    { id:"sh6", titel:"Zhujiajiao waterstad", notitie:"Historisch canal-stadje op ~1 uur. Gondels, bruggetjes, oude winkeltjes.", weather:"any", tess:false, metro:"🚇 Lijn 17 → Zhujiajiao (朱家角)", zone:"buiten" },
+    { id:"sh7", titel:"Columbia Circle + Xingfuli wandelroute", notitie:"~3,2 km autovrij onder platanenlaan. Tsutaya Books, robot-ordering. Direct vanuit jullie hotel op Panyu Road!", weather:"any", tess:false, metro:"🚶 Te voet vanuit hotel – Xingfuli ligt schuin tegenover op Panyu Road 381", zone:"hotel" },
+    { id:"sh8", titel:"Futuristisch restaurant (drone/robot)", notitie:"Drone-bezorging of robot-bediening. Reserveren!", weather:"indoor", tess:true, metro:"🚇 Afhankelijk van restaurant – meestal in Pudong of Jing'An", zone:"centrum" },
+    { id:"sh9", titel:"Yu Garden + bazaar (豫园)", notitie:"Klassieke Ming-dynasty tuin. Omringd door bazaarsteegjes – ideaal voor streetfood en souvenirs. Op ~2 km van hotel.", weather:"any", tess:true, metro:"🚇 Lijn 10 → Yu Garden (豫园)", zone:"bund" },
+    { id:"sh10", titel:"French Concession + Tianzifang", notitie:"Historische Franse wijk met smalle steegjes, koffietentjes en galerijtjes. Een van de meest karakteristieke buurten van Shanghai.", weather:"any", tess:false, metro:"🚇 Lijn 1 → Shaanxi South Road (陕西南路)", zone:"french" },
+    { id:"sh11", titel:"People's Park + Shanghai Museum", notitie:"Groen park met Shanghai Museum (gratis, 120.000 artefacten). Vanuit hotel: lijn 10 richting centrum.", weather:"sun", tess:true, metro:"🚇 Lijn 10 → People's Square (人民广场), 4 stops", zone:"centrum" },
+    { id:"sh12", titel:"Lujiazui skyline – wolkenkrabbers", notitie:"Jin Mao Tower, SWFC en Shanghai Tower van dichtbij. Observation deck Shanghai Tower (632m!) optioneel.", weather:"any", tess:false, metro:"🚇 Lijn 2 → Lujiazui (陆家嘴)", zone:"pudong" },
+    { id:"sh14", titel:"Jialing Street Food Market", notitie:"Drukke streetfood markt met lokale hapjes, snacks en sfeer. Leuk bij mooi weer.", weather:"sun", tess:true, metro:"🚇 Lijn 11 → Jialing Road", zone:"hotel" },
+    { id:"sh15", titel:"PRISMA Mall Pudong – dinosaurussen 🦖", notitie:"Gloednieuw megamall (420.000m²) met gratis dino-tentoonstelling op verdiepingen 4-6. Open t/m 31 aug 2026! Volledig airconditioned.", weather:"indoor", tess:true, metro:"🚇 Lijn 6 of 12 → Jufeng Road (居丰路), directe toegang via ondergrondse doorgang", zone:"pudong" },
+    { id:"sh16", titel:"Xujiahui shopping district", notitie:"Groot indoor winkelgebied met meerdere malls aan elkaar. Ideaal bij regen. Exit 3 bij Zikawei Library voor oriëntatie.", weather:"indoor", tess:false, metro:"🚇 Lijn 1/9/11 → Xujiahui (徐家汇)", zone:"french" },
+    { id:"sh17", titel:"Neobio Family Center 🎪", notitie:"Indoor familiepark: speelstad, klimmuren, trampoline, boekenwinkels, restaurant. Meerdere locaties. Bij Yu Garden te combineren met bezoek aan de tuin.", weather:"indoor", tess:true, metro:"🚇 Lijn 10 → Yu Garden (豫园) voor de Yu Garden-vestiging. Of Ruihong Tiandi vestiging: lijn 4/12 → Linping Road", zone:"bund" },
   ],
   yangshuo:[
-    { id:"ys1", titel:"E-bike rijstvelden route + One Chi Café", notitie:"Xiyue Haven → Gongnong Bridge → Greenway. 100% autovrij, kinderzitje.", weather:"sun", tess:true, metro:"🚲 Direct vanuit Xiyue Haven – geen vervoer nodig" },
-    { id:"ys2", titel:"Bamboe vlot varen – Yulong River", notitie:"Rustig afdrijven. Zwemvest aanwezig.", weather:"sun", tess:true, metro:"🛺 Tuk-tuk of taxi vanuit Yangshuo centrum (~10 min)" },
-    { id:"ys3", titel:"Ruyi Peak kabelbaan", notitie:"Spectaculair uitzicht over karstbergen.", weather:"sun", tess:false, metro:"🚌 Bus of taxi vanuit Yangshuo centrum (~20 min)" },
-    { id:"ys4", titel:"Ten-Mile Gallery – e-scooter met kinderzitje", notitie:"Langs Yulong rivier met karstbergen. Huren in Yangshuo.", weather:"sun", tess:true, metro:"🛵 E-scooter huren in Yangshuo West Street" },
-    { id:"ys5", titel:"Yangshuo centrum verkennen", notitie:"West Street, winkeltjes, streetfood.", weather:"any", tess:true, metro:"🚶 Te voet vanuit centrum" },
+    { id:"ys1", titel:"E-bike rijstvelden route + One Chi Café", notitie:"Xiyue Haven → Gongnong Bridge → Greenway. 100% autovrij, kinderzitje.", weather:"sun", tess:true, metro:"🚲 Direct vanuit Xiyue Haven – geen vervoer nodig", zone:"rivier" },
+    { id:"ys2", titel:"Bamboe vlot varen – Yulong River", notitie:"Rustig afdrijven. Zwemvest aanwezig.", weather:"sun", tess:true, metro:"🛺 Tuk-tuk of taxi vanuit Yangshuo centrum (~10 min)", zone:"rivier" },
+    { id:"ys3", titel:"Ruyi Peak kabelbaan", notitie:"Spectaculair uitzicht over karstbergen.", weather:"sun", tess:false, metro:"🚌 Bus of taxi vanuit Yangshuo centrum (~20 min)", zone:"berg" },
+    { id:"ys4", titel:"Ten-Mile Gallery – e-scooter met kinderzitje", notitie:"Langs Yulong rivier met karstbergen. Huren in Yangshuo.", weather:"sun", tess:true, metro:"🛵 E-scooter huren in Yangshuo West Street", zone:"rivier" },
+    { id:"ys5", titel:"Yangshuo centrum verkennen", notitie:"West Street, winkeltjes, streetfood.", weather:"any", tess:true, metro:"🚶 Te voet vanuit centrum", zone:"centrum" },
   ],
   chengdu:[
-    { id:"cd1", titel:"Giant Panda Base 🐼", notitie:"Vroeg gaan (08:00)! Panda's actiefst in de ochtend. Rode panda's ook.", weather:"any", tess:true, metro:"🚇 Lijn 3 → Panda Avenue (熊猫大道), dan bus 198" },
-    { id:"cd2", titel:"Renmin Park", notitie:"Bootjes, speeltuin, theehuizen. Ontspannen voor Tess.", weather:"sun", tess:true, metro:"🚇 Lijn 4 → Renmin Park (人民公园)" },
-    { id:"cd3", titel:"Kuanzhai Alley", notitie:"Historische 'brede en smalle steeg', streetfood.", weather:"any", tess:false, metro:"🚇 Lijn 4 → Kuanzhai Alley (宽窄巷子)" },
-    { id:"cd4", titel:"Taikoo Li + Chunxi Road", notitie:"Trendy winkelwijk, lokale merken, concept stores.", weather:"any", tess:false, metro:"🚇 Lijn 2/3 → Chunxi Road (春熙路)" },
-    { id:"cd5", titel:"Eastern Suburb Memory", notitie:"Creatieve wijk in oude fabriekshal. Art, muziek, streetfood.", weather:"any", tess:false, metro:"🚇 Lijn 4 → Er Xian Qiao (二仙桥)" },
-    { id:"cd6", titel:"Hotpot avond 🌶️", notitie:"Half-half pot bestellen voor Tess. Bù là = niet pittig!", weather:"indoor", tess:false, metro:"🚇 Diverse locaties – Chunxi Road area heeft veel opties" },
+    { id:"cd1", titel:"Giant Panda Base 🐼", notitie:"Vroeg gaan (08:00)! Panda's actiefst in de ochtend. Rode panda's ook.", weather:"any", tess:true, metro:"🚇 Lijn 3 → Panda Avenue (熊猫大道), dan bus 198", zone:"noord" },
+    { id:"cd2", titel:"Renmin Park", notitie:"Bootjes, speeltuin, theehuizen. Ontspannen voor Tess.", weather:"sun", tess:true, metro:"🚇 Lijn 4 → Renmin Park (人民公园)", zone:"west" },
+    { id:"cd3", titel:"Kuanzhai Alley", notitie:"Historische 'brede en smalle steeg', streetfood.", weather:"any", tess:false, metro:"🚇 Lijn 4 → Kuanzhai Alley (宽窄巷子)", zone:"west" },
+    { id:"cd4", titel:"Taikoo Li + Chunxi Road + 3D panda 🐼", notitie:"Trendy winkelwijk. Bij IFS mall: 3D panda klimt uit de gevel – voorkant zichtbaar op verdieping 7, achterkant vanuit de straat. 's Avonds mooi met de Daci Temple lichtshow.", weather:"any", tess:true, metro:"🚇 Lijn 2/3 → Chunxi Road (春熙路)", zone:"centrum" },
+    { id:"cd9", titel:"Jinli Old Street (锦里) 🏮", notitie:"Historische steeg met streetfood, lantaarns en ambachten naast het Wuhou Temple. 's Avonds het mooiste als de lantaarns branden. Dan dan mian en wontons ook hier verkrijgbaar.", weather:"any", tess:true, metro:"🚇 Lijn 3 → Gaoshengqiao (高升桥), dan 600m lopen richting noordwest", zone:"zuid" },
+    { id:"cd5", titel:"Eastern Suburb Memory", notitie:"Creatieve wijk in oude fabriekshal. Art, muziek, streetfood.", weather:"any", tess:false, metro:"🚇 Lijn 4 → Er Xian Qiao (二仙桥)", zone:"oost" },
+    { id:"cd6", titel:"Hotpot avond 🌶️", notitie:"Half-half pot bestellen voor Tess. Bù là = niet pittig!", weather:"indoor", tess:false, metro:"🚇 Diverse locaties – Chunxi Road area heeft veel opties", zone:"centrum" },
+    { id:"cd7", titel:"Tower of Vitality (生机之塔) 💧", notitie:"Zes bamboe-pilaren van 26-39m hoog met watercascades. 's Avonds spectaculaire kleurveranderende lichtshow. Bij SKP Mall, Financial City.", weather:"any", tess:true, metro:"🚇 Lijn 1 → Jincheng Road (锦城大道)", zone:"zuid" },
+
   ],
   beijing:[
-    { id:"bj1", titel:"Grote Muur – Mutianyu", notitie:"Kabelbaan omhoog, rodelbaan omlaag! Geen tas meenemen.", weather:"sun", tess:true, metro:"🚇 Geen metro – georganiseerde bus (H23) of tour vanuit Dongzhimen" },
-    { id:"bj2", titel:"Verboden Stad + Tiananmen", notitie:"⚠️ GEEN TAS = kortere rij! Tickets online. Stampboekje kopen!", weather:"sun", tess:false, metro:"🚇 Lijn 1 → Tiananmen East (天安门东)" },
-    { id:"bj3", titel:"Gài Zhāng stempels 📮", notitie:"Inktstempels verzamelen. Gratis bij Tiananmen. Tess vindt dit geweldig!", weather:"any", tess:true, metro:"🚇 Lijn 1 → Tiananmen East (天安门东)" },
-    { id:"bj4", titel:"Chaoyang Park", notitie:"Eendjes voeren, bootje varen, speeltuinen. Perfect voor Tess!", weather:"sun", tess:true, metro:"🚇 Lijn 10 → Nongzhangguan (农展馆), of lijn 6 → Hujialou" },
-    { id:"bj5", titel:"Sanlitun wijk", notitie:"Trendy winkelen, internationale sfeer, goede lunch-opties.", weather:"any", tess:false, metro:"🚇 Lijn 10 → Tuanjiehu (团结湖)" },
-    { id:"bj6", titel:"Wangfujing snackstraat", notitie:"Schorpioen-spiesen, zeesterren. Dapper zijn!", weather:"any", tess:false, metro:"🚇 Lijn 1 → Wangfujing (王府井)" },
-    { id:"bj7", titel:"Shichahai hutong & meren", notitie:"Historische steegjes rondom drie meren. Fietsen, rustig.", weather:"any", tess:false, metro:"🚇 Lijn 6 → Beihai North (北海北)" },
-    { id:"bj8", titel:"Peking eend bij Siji Minfu 🦆", notitie:"Beste prijs-kwaliteit. Qianmen of Forbidden City vestiging. Reserveren!", weather:"indoor", tess:false, metro:"🚇 Lijn 2 → Qianmen (前门)" },
+    { id:"bj1", titel:"Grote Muur – Mutianyu", notitie:"Kabelbaan omhoog, rodelbaan omlaag! Geen tas meenemen.", weather:"sun", tess:true, metro:"🚇 Geen metro – georganiseerde bus (H23) of tour vanuit Dongzhimen", zone:"buiten" },
+    { id:"bj2", titel:"Verboden Stad + Tiananmen", notitie:"⚠️ GEEN TAS = kortere rij! Tickets online. Stampboekje kopen!", weather:"sun", tess:false, metro:"🚇 Lijn 1 → Tiananmen East (天安门东)", zone:"centrum" },
+    { id:"bj3", titel:"Gài Zhāng stempels 📮", notitie:"Inktstempels verzamelen. Gratis bij Tiananmen. Tess vindt dit geweldig!", weather:"any", tess:true, metro:"🚇 Lijn 1 → Tiananmen East (天安门东)", zone:"centrum" },
+    { id:"bj4", titel:"Chaoyang Park", notitie:"Eendjes voeren, bootje varen, speeltuinen. Perfect voor Tess!", weather:"sun", tess:true, metro:"🚇 Lijn 10 → Nongzhangguan (农展馆), of lijn 6 → Hujialou", zone:"oost" },
+    { id:"bj5", titel:"Sanlitun wijk", notitie:"Trendy winkelen, internationale sfeer, goede lunch-opties.", weather:"any", tess:false, metro:"🚇 Lijn 10 → Tuanjiehu (团结湖)", zone:"oost" },
+    { id:"bj6", titel:"Wangfujing snackstraat", notitie:"Schorpioen-spiesen, zeesterren. Dapper zijn!", weather:"any", tess:false, metro:"🚇 Lijn 1 → Wangfujing (王府井)", zone:"centrum" },
+    { id:"bj7", titel:"Shichahai hutong & meren", notitie:"Historische steegjes rondom drie meren. Fietsen, rustig.", weather:"any", tess:false, metro:"🚇 Lijn 6 → Beihai North (北海北)", zone:"centrum" },
+    { id:"bj8", titel:"Peking eend bij Siji Minfu 🦆", notitie:"Beste prijs-kwaliteit. Qianmen of Forbidden City vestiging. Reserveren!", weather:"indoor", tess:false, metro:"🚇 Lijn 2 → Qianmen (前门)", zone:"centrum" },
   ],
   beidaihe:[
-    { id:"bd1", titel:"Strand zwemmen", notitie:"Gele Zee strand. Rustig en zandstrand.", weather:"sun", tess:true, metro:"🚶 Te voet vanuit Summer Solstice hotel" },
-    { id:"bd2", titel:"Pigeon Nest Park", notitie:"Kustpark met rotsen. Rustige wandeling.", weather:"any", tess:true, metro:"🚌 Bus of taxi vanuit hotel (~10 min)" },
-    { id:"bd3", titel:"Liuzhuang Night Market", notitie:"Avondmarkt vlak bij hotel. Streetfood, souvenirs.", weather:"any", tess:true, metro:"🚶 Te voet – vlak bij Summer Solstice hotel" },
+    { id:"bd1", titel:"Strand zwemmen", notitie:"Gele Zee strand. Rustig en zandstrand.", weather:"sun", tess:true, metro:"🚶 Te voet vanuit Summer Solstice hotel", zone:"strand" },
+    { id:"bd2", titel:"Pigeon Nest Park", notitie:"Kustpark met rotsen. Rustige wandeling.", weather:"any", tess:true, metro:"🚌 Bus of taxi vanuit hotel (~10 min)", zone:"strand" },
+    { id:"bd3", titel:"Liuzhuang Night Market", notitie:"Avondmarkt vlak bij hotel. Streetfood, souvenirs.", weather:"any", tess:true, metro:"🚶 Te voet – vlak bij Summer Solstice hotel", zone:"strand" },
   ],
 };
 
@@ -87,6 +94,8 @@ const DISHES = [
   { id:"ds12", nl:"Huang Liangfen", zh:"黄凉粉", pinyin:"Huáng liángfěn", klank:"hwang lyang-fun", stad:"Chengdu", desc:"Gele bonenmeel-gelei koud geserveerd met pittige saus. Karakteristieke gele kleur. Lichte zomerhap.", warn:false },
 
   { id:"ds14", nl:"Re Gan Mian", zh:"热干面", pinyin:"Règān miàn", klank:"ruh-gan myen", stad:"Overal", desc:"Hete droge noedels met sesamdeeg, sojasaus en azijn. Droog en hartig, sterk eigen smaak. Populair straatontbijt.", warn:false },
+  { id:"ds15", nl:"San Yang Mian", zh:"三样面", pinyin:"Sān yàng miàn", klank:"san yang myen", stad:"Chengdu", desc:"Noedels in drie varianten bij Lao Chengdu San Yang Mian. De 'oude' variant – geblancheerde noedels met pittige vleessaus en sperziebonen – is de favoriet. Michelin Bib Gourmand aanbevolen.", warn:true, warnTekst:"🌶️ Pittig" },
+  { id:"ds16", nl:"Wonton met chili", zh:"抄手", pinyin:"Chāoshǒu", klank:"chow-show", stad:"Chengdu", desc:"Zachte wontons in bouillon, geserveerd met gehakte chili aan de zijkant. Typisch Chengdu-stijl. Bestel dit als bijgerecht bij de San Yang Mian.", warn:true, warnTekst:"🌶️ Pittig" },
 ];
 
 const DAYS_TEMPLATE = [
@@ -236,33 +245,87 @@ function SlotCard({slot,label,accent}) {
   );
 }
 
+// ─── ZONE LABELS ──────────────────────────────────────────────────────────────
+const ZONE_LABELS = {
+  shanghai: {
+    hotel:   "🏨 Bij hotel (Changning)",
+    bund:    "🌊 Bund & centrum",
+    french:  "🌿 French Concession",
+    pudong:  "🏙️ Pudong",
+    buiten:  "🚌 Buiten stad",
+  },
+  chengdu: {
+    west:    "🟡 West – Kuanzhai/Renmin",
+    centrum: "🟠 Centrum – Chunxi/Taikoo",
+    noord:   "🔵 Noord – Panda Base",
+    oost:    "🟣 Oost – Eastern Suburb",
+    zuid:    "🟢 Zuid – Jinli/Wuhou",
+  },
+  beijing: {
+    centrum: "🔴 Centrum – Verboden Stad",
+    oost:    "🟢 Oost – Sanlitun/Chaoyang",
+    buiten:  "🚌 Buiten stad – Grote Muur",
+  },
+  yangshuo: {
+    rivier:  "🛶 Langs de rivier",
+    berg:    "⛰️ Bergen",
+    centrum: "🏘️ Yangshuo centrum",
+  },
+  beidaihe: {
+    strand: "🏖️ Strand & omgeving",
+  },
+};
+
 // ─── SUGGESTIES ───────────────────────────────────────────────────────────────
 function Suggesties({regio,weatherMode,tessMode}) {
+  const [activeZone,setActiveZone]=useState(null);
   if(regio==="travel") return null;
   let list = ACTIVITIES[regio]||[];
   if(weatherMode==="rain") list=list.filter(a=>a.weather==="indoor"||a.weather==="any");
   if(weatherMode==="sun")  list=list.filter(a=>a.weather==="sun"||a.weather==="any");
   if(tessMode) list=list.filter(a=>a.tess);
-  if(list.length===0) return <div style={{padding:"10px 12px",background:C.mist,borderRadius:10,fontSize:12,color:C.dim,fontStyle:"italic"}}>Geen activiteiten gevonden met deze filters.</div>;
+  if(activeZone) list=list.filter(a=>a.zone===activeZone);
+
+  const zones = ZONE_LABELS[regio];
+
   return (
-    <div style={{display:"grid",gap:6}}>
-      {list.map(act=>(
-        <div key={act.id} style={{background:C.white,borderRadius:10,padding:"10px 12px",border:`0.5px solid ${C.mist}`,borderLeft:`3px solid ${act.weather==="indoor"?C.rain:act.weather==="sun"?C.sun:C.ghost}`}}>
-          <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:8}}>
-            <div style={{flex:1}}>
-              <div style={{fontSize:13,fontWeight:600,color:C.ink}}>{act.titel}</div>
-              <div style={{fontSize:11,color:C.dim,marginTop:3,lineHeight:1.5}}>{act.notitie}</div>
-              {act.metro&&<div style={{fontSize:11,color:C.shanghai,marginTop:5,fontWeight:500}}>{act.metro}</div>}
-            </div>
-            <div style={{display:"flex",flexDirection:"column",gap:4,flexShrink:0,alignItems:"flex-end"}}>
-              {act.tess&&<Chip bg="#FCE7F3" color={C.tess}>👧 Tess</Chip>}
-              <Chip bg={act.weather==="indoor"?"#EBF5FF":act.weather==="sun"?"#FFFBEB":"#F0FFF4"} color={act.weather==="indoor"?C.rain:act.weather==="sun"?C.sun:C.yangshuo}>
-                {act.weather==="indoor"?"🏠 Indoor":act.weather==="sun"?"☀️ Buiten":"🌂 Altijd"}
-              </Chip>
-            </div>
+    <div>
+      {/* zone filter */}
+      {zones&&(
+        <div style={{marginBottom:12}}>
+          <div style={{fontSize:11,fontWeight:700,color:C.dim,textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:7}}>📌 Per wijk</div>
+          <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
+            <button onClick={()=>setActiveZone(null)} style={{fontSize:11,padding:"4px 10px",borderRadius:20,border:`1px solid ${!activeZone?C.ink:C.mist}`,background:!activeZone?C.ink:"none",color:!activeZone?C.white:C.dim,cursor:"pointer",fontWeight:!activeZone?700:400}}>Alles</button>
+            {Object.entries(zones).map(([z,label])=>(
+              <button key={z} onClick={()=>setActiveZone(activeZone===z?null:z)}
+                style={{fontSize:11,padding:"4px 10px",borderRadius:20,border:`1px solid ${activeZone===z?C.shanghai:C.mist}`,background:activeZone===z?`${C.shanghai}15`:"none",color:activeZone===z?C.shanghai:C.dim,cursor:"pointer",fontWeight:activeZone===z?700:400}}>
+                {label}
+              </button>
+            ))}
           </div>
         </div>
-      ))}
+      )}
+
+      {list.length===0&&<div style={{padding:"10px 12px",background:C.mist,borderRadius:10,fontSize:12,color:C.dim,fontStyle:"italic"}}>Geen activiteiten gevonden met deze filters.</div>}
+      <div style={{display:"grid",gap:6}}>
+        {list.map(act=>(
+          <div key={act.id} style={{background:C.white,borderRadius:10,padding:"10px 12px",border:`0.5px solid ${C.mist}`,borderLeft:`3px solid ${act.weather==="indoor"?C.rain:act.weather==="sun"?C.sun:C.ghost}`}}>
+            <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:8}}>
+              <div style={{flex:1}}>
+                <div style={{fontSize:13,fontWeight:600,color:C.ink}}>{act.titel}</div>
+                <div style={{fontSize:11,color:C.dim,marginTop:3,lineHeight:1.5}}>{act.notitie}</div>
+                {act.metro&&<div style={{fontSize:11,color:C.shanghai,marginTop:5,fontWeight:500}}>{act.metro}</div>}
+              </div>
+              <div style={{display:"flex",flexDirection:"column",gap:4,flexShrink:0,alignItems:"flex-end"}}>
+                {act.tess&&<Chip bg="#FCE7F3" color={C.tess}>👧 Tess</Chip>}
+                <Chip bg={act.weather==="indoor"?"#EBF5FF":act.weather==="sun"?"#FFFBEB":"#F0FFF4"} color={act.weather==="indoor"?C.rain:act.weather==="sun"?C.sun:C.yangshuo}>
+                  {act.weather==="indoor"?"🏠 Indoor":act.weather==="sun"?"☀️ Buiten":"🌂 Altijd"}
+                </Chip>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -660,6 +723,24 @@ const RESTAURANTS = [
       { naam:"In de rijstvelden", adres:"Langs de Greenway, ca. 25 min fietsen vanaf Xiyue Haven" },
     ],
     tip:"Sapjes, taart en airco – perfect als Tess even wil afkoelen.",
+  },
+  {
+    id:"r04", naam:"Lao Chengdu San Yang Mian", zh:"老成都三样面", stad:"Chengdu", color:"#B85C1A",
+    gerecht:"San Yang Mian + Wontons",
+    desc:"Authentiek 'hole-in-the-wall' noedelrestaurant, Michelin Bib Gourmand. Populair bij locals. Noedels in drie varianten ('oud', 'nieuw', 'meer') – de 'oude' met pittige vleessaus en sperziebonen is de favoriet. Wontons met gehakte chili erbij bestellen!",
+    locaties:[
+      { naam:"Guojielou Street vestiging", adres:"No. 6-8, 46 Guojielou Street, Qingyang, Chengdu" },
+    ],
+    tip:"Geen reservering mogelijk – ga vroeg. Klein en snel vol. Sluit af met tofu-dessert met rode bonen!",
+  },
+  {
+    id:"r05", naam:"Haidilao Hotpot", zh:"海底捞", stad:"Shanghai / Chengdu / Peking", color:"#9B2335",
+    gerecht:"Hotpot 🌶️",
+    desc:"Meest kindvriendelijke hotpot-keten van China. Speelkamer met begeleiding, gratis speelgoed voor kinderen, kindermaaltijden, noodle-dansshow aan tafel. Meerdere vestigingen in elke stad.",
+    locaties:[
+      { naam:"Meerdere vestigingen", adres:"Zoek dichtstbijzijnde locatie via de Haidilao app of WeChat" },
+    ],
+    tip:"Reserveer vooraf via WeChat mini-program. Bestel een 4-vaks pot – 1 pittig, 3 mild water. Véél goedkoper dan 2-vaks!",
   },
 ];
 
