@@ -52,6 +52,7 @@ const ACTIVITIES = {
     { id:"ys3", titel:"Ruyi Peak kabelbaan", notitie:"Spectaculair uitzicht over karstbergen.", weather:"sun", tess:false, metro:"🚌 Bus of taxi vanuit Yangshuo centrum (~20 min)", zone:"berg" },
     { id:"ys4", titel:"Ten-Mile Gallery – e-scooter met kinderzitje", notitie:"Langs Yulong rivier met karstbergen. Huren in Yangshuo.", weather:"sun", tess:true, metro:"🛵 E-scooter huren in Yangshuo West Street", zone:"rivier" },
     { id:"ys5", titel:"Yangshuo centrum verkennen", notitie:"West Street, winkeltjes, streetfood.", weather:"any", tess:true, metro:"🚶 Te voet vanuit centrum", zone:"centrum" },
+    { id:"ys6", titel:"Impression Liu Sanjie 🎭", notitie:"Enorme openluchtshow op het water tussen de karstbergen, geregisseerd door Zhang Yimou. 's Avonds met 600 lokale acteurs en lichteffecten. Surrealistisch spektakel – voor Tess waarschijnlijk magisch. Tickets vooraf boeken!", weather:"any", tess:true, metro:"🚕 Taxi vanuit Yangshuo centrum (~15 min). Optie om via hotel te boeken.", zone:"rivier" },
   ],
   chengdu:[
     { id:"cd1", titel:"Giant Panda Base 🐼", notitie:"Vroeg gaan (08:00)! Panda's actiefst in de ochtend. Rode panda's ook.", weather:"any", tess:true, metro:"🚇 Lijn 3 → Panda Avenue (熊猫大道), dan bus 198", zone:"noord" },
@@ -62,6 +63,8 @@ const ACTIVITIES = {
     { id:"cd5", titel:"Eastern Suburb Memory", notitie:"Creatieve wijk in oude fabriekshal. Art, muziek, streetfood.", weather:"any", tess:false, metro:"🚇 Lijn 4 → Er Xian Qiao (二仙桥)", zone:"oost" },
     { id:"cd6", titel:"Hotpot avond 🌶️", notitie:"Half-half pot bestellen voor Tess. Bù là = niet pittig!", weather:"indoor", tess:false, metro:"🚇 Diverse locaties – Chunxi Road area heeft veel opties", zone:"centrum" },
     { id:"cd7", titel:"Tower of Vitality (生机之塔) 💧", notitie:"Zes bamboe-pilaren van 26-39m hoog met watercascades. 's Avonds spectaculaire kleurveranderende lichtshow. Bij SKP Mall, Financial City.", weather:"any", tess:true, metro:"🚇 Lijn 1 → Jincheng Road (锦城大道)", zone:"zuid" },
+    { id:"cd10", titel:"Jiaozi Avenue Robot Street 🤖", notitie:"Must-do! Robotwijk met humanoïde robots, robotdogs, bezorgrobots, AI-companions, robotvoetbal en robotboksen. Robots ingezet in openbare ruimte – niet achter glas. ROBO+ flagship store aanwezig.", weather:"any", tess:true, metro:"🚇 Lijn 1 → Jiaozi Avenue (交子大道), Chengdu High-Tech Zone", zone:"centrum" },
+    { id:"cd11", titel:"三国奇兵·机甲觉醒 – Robot Adventure Camp 🦾", notitie:"Loopt t/m 31 augustus 2026! Cyberpunk Drie Koninkrijken-thema met 20+ humanoïde robots en robotdogs. Interactieve opdrachten – voor Tess: Chengdu's antwoord op Disneyland. Check locatie via WeChat voor vertrek.", weather:"any", tess:true, metro:"🚕 Taxi/Didi – check actuele locatie via WeChat voor vertrek", zone:"centrum" },
 
   ],
   beijing:[
@@ -73,11 +76,14 @@ const ACTIVITIES = {
     { id:"bj6", titel:"Wangfujing snackstraat", notitie:"Schorpioen-spiesen, zeesterren. Dapper zijn!", weather:"any", tess:false, metro:"🚇 Lijn 1 → Wangfujing (王府井)", zone:"centrum" },
     { id:"bj7", titel:"Shichahai hutong & meren", notitie:"Historische steegjes rondom drie meren. Fietsen, rustig.", weather:"any", tess:false, metro:"🚇 Lijn 6 → Beihai North (北海北)", zone:"centrum" },
     { id:"bj8", titel:"Peking eend bij Siji Minfu 🦆", notitie:"Beste prijs-kwaliteit. Qianmen of Forbidden City vestiging. Reserveren!", weather:"indoor", tess:false, metro:"🚇 Lijn 2 → Qianmen (前门)", zone:"centrum" },
+    { id:"bj9", titel:"Robot World + robotrestaurant 🤖🍜", notitie:"Humanoïde robots, robotdogs, robotvoetbal en een robotrestaurant waar robots Chinese gerechten bereiden. Combineer met Xiaomi EV smart factory en Baidu Apollo Park voor een complete 'future tech day'.", weather:"any", tess:true, metro:"🚇 Lijn 5 → Songjiazhuang (宋家庄), dan bus naar Beijing E-Town (南部新区)", zone:"buiten" },
   ],
   beidaihe:[
-    { id:"bd1", titel:"Strand zwemmen", notitie:"Gele Zee strand. Rustig en zandstrand.", weather:"sun", tess:true, metro:"🚶 Te voet vanuit Summer Solstice hotel", zone:"strand" },
-    { id:"bd2", titel:"Pigeon Nest Park", notitie:"Kustpark met rotsen. Rustige wandeling.", weather:"any", tess:true, metro:"🚌 Bus of taxi vanuit hotel (~10 min)", zone:"strand" },
-    { id:"bd3", titel:"Liuzhuang Night Market", notitie:"Avondmarkt vlak bij hotel. Streetfood, souvenirs.", weather:"any", tess:true, metro:"🚶 Te voet – vlak bij Summer Solstice hotel", zone:"strand" },
+    { id:"bd1", titel:"Strand + schelpjes & krabbetjes zoeken 🐚", notitie:"Strand ligt op ~0,8 km van hotel (7-10 min lopen). Hotel verstrekt gratis materiaal voor strandjutten en krabben zoeken! Perfecte middagformule: 16:00 → strand → schelpjes zoeken → zandspelen → douchen → Liuzhuang Night Market.", weather:"sun", tess:true, metro:"🚶 ~10 min lopen vanuit hotel", zone:"strand" },
+    { id:"bd2", titel:"Liuzhuang Night Market 🌙", notitie:"Letterlijk naast jullie hotel – ca. 1 minuut lopen. Kraampjes met eten, speelgoed en spelletjes. Met Tess: ga rond 17:30-18:00. Gewoon teruglopen zodra ze moe wordt.", weather:"any", tess:true, metro:"🚶 Direct vanuit hotel, 1 min lopen", zone:"strand" },
+    { id:"bd3", titel:"Pigeon Nest Park / 鸽子窝公园 🐦", notitie:"Kustpark met wetlands, vogels, rotsen en zeeuitzicht. Ochtend het mooist: ga 1,5-2 uur, beetje rondlopen en vogels kijken. Open 08:00-18:00.", weather:"any", tess:true, metro:"🚕 ~10 min taxi vanuit hotel", zone:"strand" },
+    { id:"bd4", titel:"Strange House & Park 👻", notitie:"Bizarre thematische attractie met gekke huizen en optische elementen. Op ~850m van hotel. Open tot 22:00, dus flexibel te combineren. Voor Tess waarschijnlijk leuker dan een historisch monument!", weather:"any", tess:true, metro:"🚶 ~10 min lopen vanuit hotel", zone:"strand" },
+    { id:"bd5", titel:"Jifa Agricultural Dream Kingdom 🎡", notitie:"集发农业梦想王国 – groot familiepark met draaimolen, reuzenrad, kinder-bumpercars, indoor soft play, glijbanen, petting zoo en tropische kas. 16 attracties! Open 08:30-17:00. Als jullie één betaalde kinderactiviteit doen: dit is hem.", weather:"any", tess:true, metro:"🚕 ~15-20 min taxi vanuit hotel", zone:"strand" },
   ],
 };
 
@@ -210,6 +216,7 @@ const WOORDEN=[
   {nl:"Toilet",zh:"厕所",pin:"Cèsuǒ",klank:"tseh-swoh"},
   {nl:"Lekker!",zh:"好吃",pin:"Hǎo chī",klank:"how-chur"},
   {nl:"Hoeveel?",zh:"多少钱",pin:"Duōshǎo qián",klank:"dwoh-shaow chyen"},
+  {nl:"Maïs",zh:"玉米",pin:"Yùmǐ",klank:"yoe-mee"},
 ];
 
 // ─── STORAGE ──────────────────────────────────────────────────────────────────
