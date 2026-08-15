@@ -261,6 +261,7 @@ const ZONE_LABELS = {
     bund:    "🌊 Bund & centrum",
     french:  "🌿 French Concession",
     pudong:  "🏙️ Pudong",
+    centrum: "🏛️ People's Square",
     buiten:  "🚌 Buiten stad",
   },
   chengdu: {
